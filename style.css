@@ -52,22 +52,11 @@ body {
     flex: 1;
   }
   
-  .project-content img {
-
-    /* fixed consistent width */
-    width: 400px;
-  
-    /* keeps image proportions correct */
-    height: auto;
-  
-    border-radius: 12px;
-  
-    /*
-    prevents image shrinking oddly
-    inside flexbox
-    */
-    flex-shrink: 0;
-  }
+.project-content img {
+  width: 400px;
+  height: 220px;
+  object-fit: cover;
+}
   
   a {
     color: #00ff99;
