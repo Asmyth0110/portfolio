@@ -1,0 +1,332 @@
+/*
+====================================================
+BODY
+====================================================
+
+body targets the whole webpage.
+
+This is the outermost visible area of the site.
+
+Used for:
+- page background
+- default text colour
+- default font
+- removing browser default spacing
+*/
+
+body {
+
+    /* Removes default white spacing around page edges */
+    margin: 0;
+  
+    /* Main font for all text unless changed later */
+    font-family: Arial, sans-serif;
+  
+    /* Dark background colour */
+    background: #111;
+  
+    /* Default text colour */
+    color: #f5f5f5;
+  }
+  
+  
+  
+  /*
+  ====================================================
+  .APP
+  ====================================================
+  
+  .app targets:
+  
+  <div class="app">
+  
+  The dot means class selector.
+  
+  Used as the main container that holds
+  all content neatly in the centre.
+  */
+  
+  .app {
+  
+    /* Stops content becoming too wide */
+    max-width: 600px;
+  
+    /*
+    Top/bottom margin = 80px
+  
+    Left/right auto means:
+    browser evenly centers the box
+    */
+    margin: 80px auto;
+  
+    /* Space inside the container */
+    padding: 30px;
+  }
+  
+  
+  
+  /*
+  ====================================================
+  H1
+  ====================================================
+  
+  Targets all <h1> headings.
+  
+  Used for your page title.
+  */
+  
+  h1 {
+  
+    /* Space below heading */
+    margin-bottom: 10px;
+  }
+  
+  
+  
+  /*
+  ====================================================
+  FORM
+  ====================================================
+  
+  Targets the <form> element.
+  
+  Your input + Add button live inside this.
+  */
+  
+  form {
+  
+    /*
+    display:flex puts children side by side
+  
+    Input and button become horizontal
+    */
+    display: flex;
+  
+    /* Space between input and button */
+    gap: 10px;
+  
+    /* Space above and below form */
+    margin: 30px 0;
+  }
+  
+  
+  
+  /*
+  ====================================================
+  INPUT
+  ====================================================
+  
+  Targets all text input boxes.
+  */
+  
+  input {
+  
+    /*
+    flex:1 means:
+  
+    Use remaining space available.
+  
+    This makes input stretch wide.
+    */
+    flex: 1;
+  
+    /* Space inside input box */
+    padding: 12px;
+  
+    /* Removes default border */
+    border: none;
+  
+    /* Rounded corners */
+    border-radius: 8px;
+  }
+  
+  
+  
+  /*
+  ====================================================
+  BUTTON
+  ====================================================
+  
+  Targets ALL buttons on page:
+  
+  - Add
+  - Done
+  - Delete
+  */
+  
+  button {
+  
+    /* Space inside button */
+    padding: 12px 16px;
+  
+    /* Remove browser default border */
+    border: none;
+  
+    /* Rounded edges */
+    border-radius: 8px;
+  
+    /*
+    Cursor becomes hand icon on hover
+  
+    Shows it is clickable
+    */
+    cursor: pointer;
+  }
+  
+  
+  
+  /*
+  ====================================================
+  UL
+  ====================================================
+  
+  Targets unordered list:
+  
+  <ul>
+  
+  Your tasks are stored inside this list.
+  */
+  
+  ul {
+  
+    /* Removes bullet points */
+    list-style: none;
+  
+    /* Removes browser default left spacing */
+    padding: 0;
+  }
+  
+  
+  
+  /*
+  ====================================================
+  .TASK
+  ====================================================
+  
+  Targets each task row.
+  
+  Created in JavaScript:
+  
+  li.classList.add("task")
+  
+  The dot means class selector.
+  */
+  
+  .task {
+  
+    /* Slightly lighter dark box */
+    background: #222;
+  
+    /* Space below each task row */
+    margin-bottom: 10px;
+  
+    /* Inner spacing */
+    padding: 14px;
+  
+    /* Rounded task card edges */
+    border-radius: 8px;
+  
+    /*
+    display:flex puts:
+  
+    task text left
+    buttons right
+    */
+    display: flex;
+  
+    /*
+    Pushes content to opposite sides
+  
+    text left / buttons right
+    */
+    justify-content: space-between;
+  
+    /*
+    Vertically aligns middle
+    */
+    align-items: center;
+  }
+  
+  
+  
+  /*
+  ====================================================
+  .TASK.COMPLETED SPAN
+  ====================================================
+  
+  Targets:
+  
+  A task row with completed class,
+  then the text inside it.
+  
+  Example:
+  
+  <li class="task completed">
+    <span>Bath</span>
+  </li>
+  */
+  
+  .task.completed span {
+  
+    /* Draw line through text */
+    text-decoration: line-through;
+  
+    /* Fade text colour */
+    color: #888;
+  }
+  
+  
+  
+  /*
+  ====================================================
+  .BUTTON-GROUP
+  ====================================================
+  
+  Targets:
+  
+  <div class="button-group">
+  
+  Created in JavaScript.
+  
+  This holds Done + Delete buttons.
+  */
+  
+  .button-group {
+  
+    /*
+    Put buttons side by side
+    */
+    display: flex;
+  
+    /* Space between buttons */
+    gap: 10px;
+  }
+  
+  
+  
+  /*
+  ====================================================
+  .BUTTON-GROUP BUTTON
+  ====================================================
+  
+  Targets buttons INSIDE button-group only.
+  
+  This is a nested selector.
+  
+  Meaning:
+  
+  Only Done/Delete buttons.
+  */
+  
+  .button-group button {
+  
+    /*
+    Minimum width keeps buttons neat
+    and stops squashing
+    */
+    min-width: 70px;
+  }
+  a {
+    color: #00ff99;
+  }
+  

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Browser Beat Machine</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Browser Beat Machine</h1>
+    <p>A browser-based step sequencer and sampler built with JavaScript using custom audio samples and modern AI-assisted development workflows.
+    </p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Beat Machine</h2>
+
+      <div class="controls">
+        <button id="playBtn">Play</button>
+        <button id="stopBtn">Stop</button>
+        <button id="clearBtn">Clear</button>
+        <button id="downloadBtn">Download Loop</button>
+
+        <label>
+          BPM:
+          <input id="bpmInput" type="number" value="120" min="60" max="200" />
+        </label>
+      </div>
+
+      <div class="sample-selectors">
+
+        <label>
+        Kick:
+        <select id="kickSelect"> 
+        <option value="samples/kicks/TRSHKT KICK X 3 KRAMER_(G).wav">Kramer</option>
+        <option value="samples/kicks/TRSHKT KICK X 1 HARD_(B).wav">Hard</option>
+        <option value="samples/kicks/TRSHKT KICK X 2 DEEP_(A).wav">Deep</option>
+        <option value="samples/kicks/TRSHKT KICK X 5 SCIFI_(E).wav">SciFi</option>
+        <option value="samples/kicks/TRSHKT KICK X 6 GRIP_(E).wav">Grip</option>
+        </select>
+        </label>
+        
+        <label>
+        Snare:
+        <select id="snareSelect">
+        <option value="samples/snares/TRSHKT SNARE X 4 ANALOG TAPE FUZZ (C).wav">Tape Fuzz</option>
+        <option value="samples/snares/Snare1.wav">Pew</option>
+        <option value="samples/snares/TRSHKT SNARE X 2 VHS (B).wav">VHS</option>
+        <option value="samples/snares/Snare3.wav">Snap</option>
+        <option value="samples/snares/TRSHKT SNARE X 5 DRUMLINE (A).wav">Drumline</option>
+        </select>
+        </label>
+        
+        <label>
+        Clap:
+        <select id="clapSelect">
+        <option value="samples/claps/Clap2.wav">Clean</option>
+        <option value="samples/claps/Clap1.wav">Thrash</option>
+        <option value="samples/claps/Clap3.wav">Fat Clap</option>
+        <option value="samples/claps/Clap4.wav">TV</option>
+        <option value="samples/claps/TRSHKT CLAP X 5 SNAP_(E).wav">Snap</option>
+        </select>
+        </label>
+        
+        <label>
+        Hi-Hat:
+        <select id="hatSelect">
+        <option value="samples/hats/TRSHKT HI HAT X 1  OK.wav">OK</option>
+        <option value="samples/hats/TRSHKT HI HAT X 2  FRESH .wav">Fresh</option>
+        <option value="samples/hats/TRSHKT HI HAT X 3  ANALOG.wav">Analog</option>
+        <option value="samples/hats/TRSHKT HI HAT X 4  CRUSH.wav">Crush</option>
+        <option value="samples/hats/TRSHKT HI HAT X 5  JABBER.wav">Jabber</option>
+        </select>
+        </label>
+        
+      </div>
+      <div id="sequencer"></div>
+    </section>
+
+    <a href="index.html">Back to Portfolio</a>
+  </main>
+
+  <script src="beat-machine.js"></script>
+</body>
+</html>

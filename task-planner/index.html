@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<!--
+====================================================
+DOCUMENT TYPE
+====================================================
+
+Tells browser this page uses modern HTML5.
+
+Without this, some browsers may render strangely.
+-->
+
+<html lang="en">
+<!--
+====================================================
+HTML ROOT ELEMENT
+====================================================
+
+This wraps the entire webpage.
+
+lang="en" tells browser and screen readers
+the page language is English.
+Useful for accessibility and SEO.
+-->
+
+<head>
+<!--
+====================================================
+HEAD SECTION
+====================================================
+
+Contains hidden setup information.
+
+Not visible on the webpage itself.
+
+Used for:
+- page title
+- CSS links
+- mobile settings
+- character encoding
+-->
+
+  <meta charset="UTF-8" />
+  <!--
+  Sets character encoding to UTF-8.
+
+  Allows letters, symbols, punctuation,
+  currency signs etc to display correctly.
+  -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--
+  Important for mobile devices.
+
+  Makes page scale correctly on phones/tablets.
+  Without this, mobile layouts can appear zoomed out.
+  -->
+
+  <title>Simple Task Planner</title>
+  <!--
+  Title shown in browser tab.
+
+  Also used in bookmarks and search engines.
+  -->
+
+  <link rel="stylesheet" href="style.css" />
+  <!--
+  Connects this HTML page to your CSS file.
+
+  rel="stylesheet" means external styling file.
+
+  href="style.css" tells browser where file is.
+  -->
+
+</head>
+
+
+
+<body>
+<!--
+====================================================
+BODY SECTION
+====================================================
+
+Everything inside body is visible on webpage.
+-->
+
+
+
+  <main class="app">
+  <!--
+  ====================================================
+  MAIN CONTENT AREA
+  ====================================================
+
+  <main> is a semantic container.
+
+  It means:
+  "This is the primary content of the page"
+
+  class="app" connects this section to CSS:
+
+  .app { ... }
+
+  which controls width, centering and spacing.
+  -->
+
+
+
+    <h1>Simple Task Planner</h1>
+    <!--
+    Main heading of page.
+
+    h1 = highest level heading.
+
+    Important for structure, accessibility and SEO.
+    -->
+
+
+
+    <p>
+      Plan tasks, mark them complete,
+      and keep track of what needs doing.
+    </p>
+    <!--
+    Paragraph text.
+
+    Used here as a short description of the app.
+    -->
+
+
+
+    <form id="taskForm">
+    <!--
+    ====================================================
+    FORM
+    ====================================================
+
+    Used for collecting user input.
+
+    id="taskForm" allows JavaScript to target it:
+
+    document.getElementById("taskForm")
+
+    JavaScript listens for submit events here.
+    -->
+
+
+
+      <input
+        id="taskInput"
+        type="text"
+        placeholder="Enter a task..."
+      />
+      <!--
+      Text input box.
+
+      id="taskInput" lets JavaScript read what user types.
+
+      type="text" means standard text field.
+
+      placeholder shows faded helper text inside box.
+      -->
+
+
+
+      <button type="submit">Add</button>
+      <!--
+      Button inside form.
+
+      type="submit" means:
+
+      When clicked:
+      submit the form
+
+      JavaScript catches this event and adds task.
+      -->
+
+
+
+    </form>
+
+
+
+    <ul id="taskList"></ul>
+    <!--
+    ====================================================
+    TASK LIST AREA
+    ====================================================
+
+    ul = unordered list
+
+    This starts empty.
+
+    JavaScript dynamically inserts tasks here.
+
+    Example after tasks added:
+
+    <li>Bath</li>
+    <li>Learn JS</li>
+
+    id="taskList" lets JavaScript target it.
+    -->
+
+    <a href="/index.html">Back to Portfolio</a>
+
+  </main>
+
+
+
+  <script src="script.js"></script>
+  <!--
+  ====================================================
+  JAVASCRIPT LINK
+  ====================================================
+
+  Connects HTML page to JavaScript file.
+
+  script.js controls:
+
+  - adding tasks
+  - deleting tasks
+  - marking complete
+  - saving tasks
+  - loading tasks
+  -->
+
+</body>
+</html>
