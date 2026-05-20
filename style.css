@@ -125,6 +125,10 @@ body {
     gap: 10px;
   }
 
+  section {
+  margin-bottom: 120px;
+}
+
   #machineIMG {
     height: 100px;
     width: auto;
