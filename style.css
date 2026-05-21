@@ -1,145 +1,167 @@
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #111;
-    color: #f5f5f5;
-    line-height: 1.6;
-  }
-  
-  header {
-    padding: 80px 20px;
-    text-align: center;
-    background: #1c1c1c;
-  }
-  
-  h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-  }
-  
-  main {
-    max-width: 900px;
-    margin: auto;
-    padding: 40px 20px;
-  }
-  
-  section {
-    margin-bottom: 50px;
-  }
-
-  .project-card {
-    background: #1f1f1f;
-    border-radius: 20px;
-    padding: 50px;
-    margin-bottom: 40px;
-  }
-  @media (max-width: 768px) 
-  
-.project-content {
-
-    /* puts text + image side by side */
-    display: flex;
-  
-    /* space between left and right */
-    justify-content: space-between;
-  
-    /* vertically align middle */
-    align-items: center;
-  
-    gap: 40px;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: #f5f5f5;
+  line-height: 1.6;
 }
 
-
-  
-  .project-text {
-    flex: 1;
-  }
-  
-.project-content img {
-  width: 400px;
-  height: 220px;
-  object-fit: cover;
+header {
+  padding: 80px 20px;
+  text-align: center;
+  background: #1c1c1c;
 }
-  
-  a {
-    color: #00ff99;
-  }
-  
-  footer {
-    text-align: center;
-    padding: 30px;
-    background: #1c1c1c;
-  }
 
-  .controls {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    margin-bottom: 30px;
-  }
-  
-  button {
-    cursor: pointer;
-  }
-  
-  .sequencer-row {
-    display: grid;
-    grid-template-columns: 100px repeat(16, 1fr);
-    gap: 6px;
-    margin-bottom: 10px;
-    align-items: center;
-  }
-  
-  .sound-label {
-    font-weight: bold;
-  }
-  
-  .step {
-    height: 35px;
-    background: #333;
-    border: 1px solid #555;
-    border-radius: 6px;
-  }
+h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
 
-  .step.bar-step {
-    background: #4a4a4a;
-  }
-  
-  .step.active {
-    background: #00ff99;
-  }
-  
-  .step.playing {
-    border: 2px solid white;
-  }
-  
+main {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+}
 
-  .sample-selectors {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-    margin-bottom: 30px;
-    max-width: 500px;
-  }
-  
-  .sample-selectors label {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-  }
-
-  section {
+section {
   margin-bottom: 120px;
 }
 
-  #machineIMG {
-    height: 100px;
-    width: auto;
-    float: right;
+a {
+  color: #00ff99;
+}
 
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #1c1c1c;
+}
+
+/* PROJECT CARDS */
+
+.project-card {
+  background: #1f1f1f;
+  border-radius: 20px;
+  padding: 50px;
+  margin-bottom: 40px;
+}
+
+.project-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.project-text {
+  flex: 1;
+}
+
+.project-content img {
+  width: 400px;
+  height: 220px;
+  object-fit: contain;
+  border-radius: 12px;
+  flex-shrink: 0;
+  background: #111;
+}
+
+/* BEAT MACHINE */
+
+.controls {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+button {
+  cursor: pointer;
+}
+
+.sequencer-row {
+  display: grid;
+  grid-template-columns: 100px repeat(16, 1fr);
+  gap: 6px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.sound-label {
+  font-weight: bold;
+}
+
+.step {
+  height: 35px;
+  background: #333;
+  border: 1px solid #555;
+  border-radius: 6px;
+}
+
+.step.bar-step {
+  background: #4a4a4a;
+}
+
+.step.active {
+  background: #00ff99;
+}
+
+.step.playing {
+  border: 2px solid white;
+}
+
+.sample-selectors {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 30px;
+  max-width: 500px;
+}
+
+.sample-selectors label {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  header {
+    padding: 60px 20px;
   }
-  #toDoIMG {
-    height: 100px;
-    width: auto;
-    float:right;
+
+  h1 {
+    font-size: 2.2rem;
   }
+
+  main {
+    padding: 30px 16px;
+  }
+
+  .project-card {
+    padding: 28px;
+  }
+
+  .project-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .project-content img {
+    width: 100%;
+    height: auto;
+    max-height: 260px;
+    object-fit: contain;
+  }
+
+  .sequencer-row {
+    grid-template-columns: 80px repeat(16, 34px);
+    overflow-x: auto;
+  }
+
+  .sample-selectors {
+    grid-template-columns: 1fr;
+  }
+}
