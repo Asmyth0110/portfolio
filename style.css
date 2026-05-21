@@ -33,7 +33,11 @@ body {
     padding: 50px;
     margin-bottom: 40px;
   }
-  @media (max-width: 768px)
+  @media (max-width: 768px) {
+    .project-content img {
+    height: 100%; width: 100%; 
+    object-fit: contain;}
+  }
   
   .project-content {
 
@@ -47,7 +51,8 @@ body {
     align-items: center;
   
     gap: 40px;
-  }
+
+
   
   .project-text {
     flex: 1;
@@ -141,6 +146,3 @@ body {
     width: auto;
     float:right;
   }
-.project-content img {
-    height: 100%; width: 100%; 
-    object-fit: contain;}
