@@ -165,3 +165,60 @@ button {
     grid-template-columns: 1fr;
   }
 }
+
+/* ========================================
+MOBILE RESPONSIVE - BEAT MACHINE
+======================================== */
+
+@media (max-width: 768px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .controls {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .sample-selectors {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+
+  /*
+  Makes sequencer horizontally scrollable
+  instead of breaking layout
+  */
+
+  .sequencer-wrapper {
+    overflow-x: auto;
+    width: 100%;
+    padding-bottom: 10px;
+  }
+
+  .sequencer-row {
+
+    /*
+    Keeps full sequencer width
+    */
+    min-width: 900px;
+
+    /*
+    Slightly smaller mobile steps
+    */
+    grid-template-columns: 80px repeat(16, 40px);
+  }
+
+  .step {
+    height: 40px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  main {
+    padding: 20px;
+  }
+}
