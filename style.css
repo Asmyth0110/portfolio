@@ -33,13 +33,9 @@ body {
     padding: 50px;
     margin-bottom: 40px;
   }
-  @media (max-width: 768px) {
-    .project-content img {
-    height: 100%; width: 100%; 
-    object-fit: contain;}
-  }
+  @media (max-width: 768px) 
   
-  .project-content {
+.project-content {
 
     /* puts text + image side by side */
     display: flex;
